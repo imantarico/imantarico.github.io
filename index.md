@@ -1,17 +1,9 @@
-# Program Scaffold, Tabs dan Images 
+# Program Todo
 
-Hal yang perlu diperhatikan |
------------- |
-Editor yang digunakan [DartPad](http://dartpad.dartlang.org) |
-Jalankan Program setiap langkah (`step`) |
-Ubah `NurcahyoApp` dengan nama sendiri |
-Tugas `6SIA1` jam `11.30` |
 
-![hasil](/flutter-tabs.gif) 
+> `Step-1` : Membuat Database `db_todo`
 
-> `Step-1` : Membuat Layout `StatelessWidget`
-
-```dart
+```vscode
 import 'package:flutter/material.dart';
 
 void main() => runApp(App13());
@@ -36,7 +28,7 @@ class App13 extends StatelessWidget {
 - ubah kode `home: NurcahyoApp(),`
 - tambah perintah dibawah untuk `class NurcahyoApp()` dan `MyTabsState` dengan menggunakan objek `SingleTickerProviderStateMixin` yang bertujuan untuk membuat `AnimationController` pada `Tab`.
 - Agar dapat dianimasikan, objek `state` yang Anda asosiasikan dengan `stateful` widget Anda tidak hanya harus meng-extend class State, itu juga harus menggunakan `mixin` yang disebut `SingleTickerProviderStateMixin`. Seperti namanya, mixin menawarkan objek `Ticker`, yang secara berulang kali menghasilkan `callback`, yang secara konvensional dikenal sebagai `ticks`. Karena object `ticks` dihasilkan berulang kali pada interval waktu yang sama, Anda dapat menggunakannya untuk memutuskan kapan masing-masing frame animasi Anda ditampilkan.
-  
+
 ```dart
 class NurcahyoApp extends StatefulWidget {
   MyTabsState createState() => new MyTabsState();
@@ -67,7 +59,7 @@ class MyTabsState extends State<NurcahyoApp> with SingleTickerProviderStateMixin
 
 ```dart
 class MyTabsState extends State<NurcahyoApp> with SingleTickerProviderStateMixin {
-  
+
   TabController controller;
 
   void initState(){
@@ -79,7 +71,7 @@ class MyTabsState extends State<NurcahyoApp> with SingleTickerProviderStateMixin
     controller.dispose();
     super.dispose();
   }
-  ... 
+  ...
 ```
 
 > `Step-4` : Design `AppBar`
@@ -110,7 +102,7 @@ class MyTabsState extends State<NurcahyoApp> with SingleTickerProviderStateMixin
   ...
 ```
 
-> `Step-5` : Membuat  `TabBarView` 
+> `Step-5` : Membuat  `TabBarView`
 
 - Menambahkan `body: TabBarView()` pada `Scaffold` setelah `appbar` sebelum `);`
 - Menambahkan `TabBarView` pada `body` Scaffold.
@@ -184,7 +176,7 @@ class MataKuliah extends StatelessWidget {
 
 - buat deklarasi `GlobalKey<ScaffoldState>` untuk `_scaffoldKey`
 - untuk mengaktifkan `Menu` pada `AppBar` tambahkan properties `key` dengan nilai `_scaffoldKey`
-- lalu pada `leading`, `onPressed` diisi  `_scaffoldKey.currentState.openDrawer())` 
+- lalu pada `leading`, `onPressed` diisi  `_scaffoldKey.currentState.openDrawer())`
 - aktifkan properties `drawer: Menu(),`
 - buat program `class Menu` di akhir program
 
