@@ -10,8 +10,9 @@
   - username varchar(50)
   - password varchar(50)
 - table tasks
+```
 
-````html
+```
 <div class="container min-vh-100 d-flex align-items-center justify-content-center">
         <form action="login.php" method="post" class="border rounded p-4">
             <div class="d-flex justify-content-center">
@@ -28,3 +29,4 @@
             <button type="submit" name="submit" class="btn btn-primary">Login</button>
         </form>
     </div>
+```
