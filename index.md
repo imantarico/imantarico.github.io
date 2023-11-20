@@ -12,8 +12,7 @@
 - table tasks
 ```
 
-> `Step-2` : Tambahkan file `login.php`
-- masukkan perintah ini di dalam tag <body>
+
 ```
 <div class="container min-vh-100 d-flex align-items-center justify-content-center">
         <form action="login.php" method="post" class="border rounded p-4">
